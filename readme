@@ -52,3 +52,4 @@ and compare shapes based on chain code similarity.
 1. Open the `GroupSixChainCode_exported.m` or `GroupSixChainCode.mlapp` (for editing the app) in MATLAB.
 2. Click **"Run"** to launch the app.
 3. Follow the GUI workflow to analyze and compare shapes.
+4. There are some example images in this repository to help test them.
