@@ -1,0 +1,48 @@
+# GroupSixChainCode MATLAB App
+
+## Overview
+`GroupSixChainCode` is a MATLAB GUI application 
+for shape analysis using Freeman Chain Code, 
+Differential Chain Code, and Normalized Chain Code. 
+It allows users to process two images, extract boundary features, 
+and compare shapes based on chain code similarity.
+
+## Features
+
+- Load and display two images for side-by-side comparison
+- Apply edge detection (Canny) and thinning to extract object boundaries
+- Generate Freeman Chain Code using 8-directional boundary traversal
+- Compute Differential Chain Code using the formula:
+  
+  dₖ = (cₖ - cₖ₋₁) mod 8
+
+- Normalize chain codes through circular shifts for rotation invariance
+- Compare normalized chain codes and output similarity as a percentage
+- Save extracted chain codes and edge data to a file
+
+## Direction Encoding (8-direction Freeman Chain Code)
+
+| Code | Direction   | Δx | Δy |
+|------|-------------|----|----|
+| 0    | East        | +1 |  0 |
+| 1    | Northeast   | +1 | -1 |
+| 2    | North       |  0 | -1 |
+| 3    | Northwest   | -1 | -1 |
+| 4    | West        | -1 |  0 |
+| 5    | Southwest   | -1 | +1 |
+| 6    | South       |  0 | +1 |
+| 7    | Southeast   | +1 | +1 |
+
+## GUI Workflow
+
+1. Load the first and second images using the respective buttons.
+2. Click "Extract Features" to apply edge detection and thinning.
+3. Use "Extract Chain Code" to generate and display the chain code data.
+4. Use "Compare the Two" to compute similarity between the two shapes.
+5. Optionally, save results to a file using the "Save Chain Code" buttons.
+
+## Getting Started
+
+1. Open `GroupSixChainCode_exported.m` or `GroupSixChainCode.mlapp`(to be able to edit the app) in MATLAB.
+2. Click "Run" to launch the app.
+3. Follow the GUI workflow to analyze and compare shapes.
