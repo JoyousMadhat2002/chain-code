@@ -15,7 +15,9 @@ and compare shapes based on chain code similarity.
 - **Apply edge detection** (Canny) and thinning to extract object boundaries
 - **Generate Freeman Chain Code** using 8-directional boundary traversal
 - **Compute Differential Chain Code** using the formula:  
-  `dₖ = (cₖ - cₖ₋₁) mod 8`
+  \[
+  d_k = (c_k - c_{k-1}) \mod 8
+  \]
 - **Normalize chain codes** through circular shifts for rotation invariance
 - **Compare normalized chain codes** and output similarity as a percentage
 - **Save extracted chain codes and edge data** to a file
